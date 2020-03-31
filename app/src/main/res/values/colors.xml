@@ -7,4 +7,5 @@
     <color name="focus_box_frame">#ffd6d6d6</color>
     <color name="focus_box_mask">#60000000</color>
     <color name="bg">#fa71cd</color>
+    <color name="fafa">#fafafa</color>
 </resources>

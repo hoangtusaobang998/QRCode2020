@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
-    tools:context=".camera.CaptureActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
-    <TextureView
-        android:id="@+id/preview_camera"
+    <androidx.viewpager.widget.ViewPager
+        android:background="#fafafa"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/rl_layout" />
-
-
-    <com.sanfulou.qrcode2020.views.CameraFocusBoxView
-        android:id="@+id/focusBoxView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/rl_layout"
-        android:layout_marginBottom="0dp" />
+        android:layout_above="@id/rl_layout"/>
 
     <RelativeLayout
         android:id="@+id/rl_layout"
@@ -56,7 +48,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
-
                 <ImageView
                     android:id="@+id/img_add_qr"
                     android:layout_width="0dp"
@@ -125,58 +116,6 @@
 
     </RelativeLayout>
 
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:layout_marginEnd="@dimen/_15sdp">
-
-
-        <ImageView
-            android:id="@+id/img_flash"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:background="@drawable/boder_red"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_flash_off"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/quet"
-            android:textColor="#fafafa"
-            android:textSize="@dimen/_18sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/img_share"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/img_share"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/boder_red"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_share"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <ImageView
         android:id="@+id/img_home"
         android:layout_width="@dimen/_50sdp"
@@ -188,5 +127,6 @@
         android:padding="@dimen/_10sdp"
         android:src="@drawable/ic_home_qr_codes"
         tools:ignore="ContentDescription" />
+
 
 </RelativeLayout>

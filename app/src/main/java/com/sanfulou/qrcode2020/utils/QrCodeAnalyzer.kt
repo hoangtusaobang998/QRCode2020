@@ -59,7 +59,7 @@ class QrCodeAnalyzer(send: Send) : ImageAnalysis.Analyzer {
     }
 
     interface Send {
-        fun sendBarcode(i: List<FirebaseVisionBarcode>?)
+        fun sendBarcode(i: List<FirebaseVisionBarcode>)
 
     }
 }

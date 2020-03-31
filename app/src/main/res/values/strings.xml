@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">QRCode2020</string>
-    <string name="quet">Quét</string>
+    <string name="app_name">QR-Code 2020</string>
+    <string name="quet">Đặt mã vạch trong khung</string>
+    <string name="sfl">San Fu Lou</string>
 </resources>

@@ -56,10 +56,10 @@ public class CameraFocusBoxView extends View {
         this.maskColor = resources.getColor(R.color.focus_box_mask);
         this.frameColor = Color.TRANSPARENT;
         this.cornerColor = resources.getColor(R.color.focus_box_corner);
-        this.bitmapRightTop = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.coner)), 270);
-        this.bitmapRightBottom = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.coner)), 0);
-        this.bitmapLeftBottom = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.coner)), 90);
-        this.bitmapLeftTop = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.coner)), 180);
+        this.bitmapRightTop = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.scan)), 90);
+        this.bitmapRightBottom = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.scan)), 180);
+        this.bitmapLeftBottom = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.scan)), 270);
+        this.bitmapLeftTop = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.scan)), 0);
         // this.bitmapRightBottomResize = rotateBitmap(drawableToBitmap(getResources().getDrawable(R.drawable.coner)), 45);
         this.wBitmap = (bitmapRightTop.getWidth() / 2);
         this.hBitmap = (bitmapRightTop.getHeight() / 2);
@@ -93,7 +93,7 @@ public class CameraFocusBoxView extends View {
                     : Math.max(height, MIN_FOCUS_BOX_HEIGHT);
 
             int left = (ScrRes.x - width) / 2;
-            int top = (ScrRes.y - height) / 4;
+            int top = (ScrRes.y - height) / 5;
 
             this.box = new Rect(left, top, left + width, (top + height) * 2);
         }
@@ -200,7 +200,7 @@ public class CameraFocusBoxView extends View {
 
     private void initScan() {
         paintScan.setColor(getResources().getColor(R.color.bg));
-        paintScan.setStrokeWidth(6);
+        paintScan.setStrokeWidth(3);
         handler = new Handler();
         refreshRunnable = this::refreshView;
     }
